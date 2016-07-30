@@ -1,0 +1,48 @@
+<md-card>
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">Current Auction</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-content ng-if="$ctrl.auction">
+        <md-card-content-media>
+            <md-list>
+                <div class="md-list-item-text">
+                    <h4>Seller: {{$ctrl.auction.user.username}}</h4>
+                </div>
+                <div class="md-list-item-text">
+                    <h4><img width="150" height="100" ng-src="/app/resources/{{$ctrl.auction.inventory_type.img}}.jpg"/>{{ $ctrl.auction.inventory_type.name }}: {{$ctrl.auction.qty}}</h4>
+                </div>
+                <div class="md-list-item-text">
+                    <h4>Time left: {{$ctrl.auction.time_left}} seconds</h4>
+                </div>
+                <div class="md-list-item-text" ng-if="!$ctrl.auction.max_bid">
+                    <h4>Minimin bid: {{$ctrl.auction.min_price}} coins</h4>
+                </div>
+                <div class="md-list-item-text" ng-if="$ctrl.auction.max_bid">
+                    <h4>Winning bid: {{$ctrl.auction.max_bid}} coins</h4>
+                </div>
+                <div class="md-body-2">
+                    <md-input-container>
+                        <label>Bid</label>
+                        <input ng-model="$ctrl.bid">
+                    </md-input-container>
+                    <md-input-container layout-align="center center">
+                        <div layout="row" layout-sm="column" layout-margin>
+                            <md-button class="md-raised md-primary" ng-click="$ctrl.placeBid()">Place Bid</md-button>
+                        </div>
+                    </md-input-container>
+                </div>
+            </md-list>
+        </md-card-content-media>
+    </md-card-content>
+    <md-card-content ng-if="!$ctrl.auction">
+        <md-card-content-media class="md-primary md-subheader" layout-margin>
+            <div class="md-media-lg card-media">
+                <div class="md-body-2">
+                    <span>No auction in the moment!</span>
+                </div>
+            </div>
+        </md-card-content-media>
+    </md-card-content>
+</md-card>

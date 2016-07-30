@@ -1,0 +1,26 @@
+{
+  "parser": "babel-eslint",
+	"rules": {
+		"babel/generator-star-spacing": 1,
+    "babel/new-cap": 1,
+    "babel/array-bracket-spacing": 1,
+    "babel/object-curly-spacing": 1,
+    "babel/object-shorthand": 1,
+    "babel/arrow-parens": 1,
+    "babel/no-await-in-loop": 1
+	},
+	"env": {
+		"node": true,
+		"browser": true,
+		"es6": true
+	},
+	"extends": "eslint:recommended",
+	"ecmaFeatures": {
+    "arrowFunctions": true,
+    "classes": true,
+    "destructuring": true
+  },
+  "plugins": [
+    "babel"
+  ]
+}

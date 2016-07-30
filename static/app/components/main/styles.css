@@ -1,0 +1,18 @@
+md-list,
+.card-media {
+	padding: 10px!important;
+}
+
+md-toast.md-error-toast-theme div.md-toast-content{
+    color: white !important;
+    background-color: red !important;
+}
+
+h4 {
+	font-weight: 400!important;
+}
+
+md-card-title {
+	background-color: rgb(63,81,181);
+	color: #fff;
+}

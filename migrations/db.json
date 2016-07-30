@@ -1,0 +1,26 @@
+{
+	"dev": {
+		"host": { "ENV" : "SQL_HOST" },
+		"user": { "ENV" : "SQL_USER" },
+		"password": { "ENV" : "SQL_PASS" },
+		"driver": "mysql",
+    "database": "auctiondev",
+		"multipleStatements": true
+	},
+	"prod": {
+		"host": { "ENV" : "SQL_HOST" },
+		"user": { "ENV" : "SQL_USER" },
+		"password": { "ENV" : "SQL_PASS" },
+		"driver": "mysql",
+    "database": "auction",
+		"multipleStatements": true
+	},
+	"test": {
+		"host": { "ENV" : "SQL_HOST" },
+		"user": { "ENV" : "SQL_USER" },
+		"password": { "ENV" : "SQL_PASS" },
+		"driver": "mysql",
+    "database": "auctiontest",
+		"multipleStatements": true
+	}
+}

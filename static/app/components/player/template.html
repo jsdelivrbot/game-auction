@@ -1,0 +1,34 @@
+<md-content flex layout layout-align="center">
+    <div layout-gt-sm flex flex-gt-sm="80" flex-gt-md="60">
+        <paper flex>
+            <div>
+                <md-card>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">Player Stats</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-content>
+                        <md-card-content-media>
+                            <md-list>
+                                <div class="md-list-item-text">
+                                    <h4>Name: {{$ctrl.player.user.username}}</h4>
+                                </div>
+                                <div class="md-list-item-text">
+                                    <h4>Coins: {{$ctrl.player.coins}}</h4>
+                                </div>
+                                <md-card-actions layout="row" layout-align="end center">
+                                    <auth-logout></auth-logout>
+                                </md-card-actions>
+                            </md-list>
+                        </md-card-content-media>
+                    </md-card-content>
+                </md-card>
+            </div>
+            <inventory ng-if="$ctrl.player" user-id="$ctrl.player.user.id" player-id="$ctrl.player.id"></inventory>
+        </paper>
+        <paper flex>
+            <auction flex ng-if="$ctrl.player" user-id="$ctrl.player.user.id" player-id="$ctrl.player.id"></auction>
+        </paper>
+    </div>
+</md-content>

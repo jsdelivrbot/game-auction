@@ -1,0 +1,1 @@
+module.exports = require("github:angular/bower-material@1.1.0-rc1/index");

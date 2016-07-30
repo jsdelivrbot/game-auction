@@ -1,0 +1,30 @@
+<md-dialog aria-label="Would you like to start new auction?">
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Would you like to start new auction?</h2>
+            </div>
+        </md-toolbar>
+        <md-dialog-content class="md-padding">
+            <md-subheader class="md-primary">Item: {{item.inventory_type.name}}</md-subheader>
+            <div>
+                <md-input-container>
+                    <label>Quantity</label>
+                    <input type="text" ng-model="data.qty">
+                </md-input-container>
+                <md-input-container>
+                    <label>Min Price</label>
+                    <input type="text" ng-model="data.minPrice">
+                </md-input-container>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button ng-click="cancel()">
+                Cancel
+            </md-button>
+            <md-button ng-click="start()" style="margin-right:20px;">
+                Start Auction
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

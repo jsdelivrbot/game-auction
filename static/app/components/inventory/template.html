@@ -1,0 +1,22 @@
+<md-card>
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">Inventory</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+        <md-card-content-media>
+            <md-list>
+                <md-list-item ng-repeat="item in $ctrl.inventory">
+                    <div class="md-list-item-text">
+                        <h4><img width="150" height="100" ng-src="/app/resources/{{item.inventory_type.img}}.jpg"/>{{ item.inventory_type.name }}: {{ item.qty }}</h4>
+                    </div>
+                    <span flex></span>
+                    <div>
+                         <md-button class="md-raised md-primary" ng-click="$ctrl.startAuction(item)">Auction</md-button>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-card-content-media>
+    </md-card-content>
+</md-card>
